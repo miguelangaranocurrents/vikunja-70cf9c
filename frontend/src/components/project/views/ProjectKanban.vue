@@ -354,6 +354,10 @@ const DRAG_OPTIONS = {
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
 	delay: 1000,
+	// The browser's native drag auto-scroll only reacts within a few pixels of the edge,
+	// let sortable scroll the board when a task is dragged towards an off screen bucket.
+	forceAutoScrollFallback: true,
+	scrollSensitivity: 100,
 } as const
 
 const MIN_SCROLL_HEIGHT_PERCENT = 0.25
